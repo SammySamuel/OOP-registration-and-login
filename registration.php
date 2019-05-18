@@ -47,12 +47,7 @@ if($_POST)
     {
 	if(($name) && ($surname) && ($bdate) && ($login_registration) && ($password_registration))
     {
-        $user=new User();
-        $user->name=$name;
-        $user->surname=$surname;
-        $user->date=$bdate;
-        $user->login_registration=$login_registration;
-        $user->password_registration=$password_registration;
+        $user=new User($name,$surname,$bdate,$login_registration,$password_registration);
 
         echo '<div id="dialog-message" title="Zarejestrowano">
         <p>
